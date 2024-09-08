@@ -6,62 +6,68 @@
             <link rel="stylesheet" href="style.css">
         </head>
         <body>
-            <h1><a href="https://react.dev/">React</a> · <a href="https://github.com/facebook/react/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" /></a> <a href="https://www.npmjs.com/package/react"><img src="https://img.shields.io/npm/v/react.svg?style=flat" alt="npm version" /></a> <a href="https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml"><img src="https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml/badge.svg" alt="(Runtime) Build and Test" /></a> <a href="https://github.com/facebook/react/actions/workflows/compiler_typescript.yml"><img src="https://github.com/facebook/react/actions/workflows/compiler_typescript.yml/badge.svg?branch=main" alt="(Compiler) TypeScript" /></a> <a href="https://legacy.reactjs.org/docs/how-to-contribute.html#your-first-pull-request"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a></h1>
-<p>React is a JavaScript library for building user interfaces.</p>
+            <h1>Rustysite</h1>
+<p><img src="https://github.com/user-attachments/assets/e587d6d4-db12-442a-972d-f54ea1af7137" alt="Rustysite" /></p>
+<p>Rustysite is a simple static site generator written in Rust. It converts Markdown files to HTML and provides a basic structure for creating a static website.</p>
+<h2>Features</h2>
 <ul>
-<li><strong>Declarative:</strong> React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.</li>
-<li><strong>Component-Based:</strong> Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM.</li>
-<li><strong>Learn Once, Write Anywhere:</strong> We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using <a href="https://nodejs.org/en">Node</a> and power mobile apps using <a href="https://reactnative.dev/">React Native</a>.</li>
+<li>Converts Markdown files to HTML</li>
+<li>Automatically generates an HTML structure with proper metadata</li>
+<li>Copies a CSS file for styling</li>
+<li>Processes all Markdown files in the input directory recursively</li>
 </ul>
-<p><a href="https://react.dev/learn">Learn how to use React in your project</a>.</p>
+<h2>Prerequisites</h2>
+<p>Before you begin, ensure you have Rust and Cargo installed on your system. You can install them from <a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a>.</p>
 <h2>Installation</h2>
-<p>React has been designed for gradual adoption from the start, and <strong>you can use as little or as much React as you need</strong>:</p>
-<ul>
-<li>Use <a href="https://react.dev/learn">Quick Start</a> to get a taste of React.</li>
-<li><a href="https://react.dev/learn/add-react-to-an-existing-project">Add React to an Existing Project</a> to use as little or as much React as you need.</li>
-<li><a href="https://react.dev/learn/start-a-new-react-project">Create a New React App</a> if you're looking for a powerful JavaScript toolchain.</li>
-</ul>
-<h2>Documentation</h2>
-<p>You can find the React documentation <a href="https://react.dev/">on the website</a>.</p>
-<p>Check out the <a href="https://react.dev/learn">Getting Started</a> page for a quick overview.</p>
-<p>The documentation is divided into several sections:</p>
-<ul>
-<li><a href="https://react.dev/learn">Quick Start</a></li>
-<li><a href="https://react.dev/learn/tutorial-tic-tac-toe">Tutorial</a></li>
-<li><a href="https://react.dev/learn/thinking-in-react">Thinking in React</a></li>
-<li><a href="https://react.dev/learn/installation">Installation</a></li>
-<li><a href="https://react.dev/learn/describing-the-ui">Describing the UI</a></li>
-<li><a href="https://react.dev/learn/adding-interactivity">Adding Interactivity</a></li>
-<li><a href="https://react.dev/learn/managing-state">Managing State</a></li>
-<li><a href="https://react.dev/learn/escape-hatches">Advanced Guides</a></li>
-<li><a href="https://react.dev/reference/react">API Reference</a></li>
-<li><a href="https://react.dev/community">Where to Get Support</a></li>
-<li><a href="https://legacy.reactjs.org/docs/how-to-contribute.html">Contributing Guide</a></li>
-</ul>
-<p>You can improve it by sending pull requests to <a href="https://github.com/reactjs/react.dev">this repository</a>.</p>
-<h2>Examples</h2>
-<p>We have several examples <a href="https://react.dev/">on the website</a>. Here is the first one to get you started:</p>
-<pre><code class="language-jsx">import { createRoot } from 'react-dom/client';
-
-function HelloMessage({ name }) {
-  return &lt;div&gt;Hello {name}&lt;/div&gt;;
-}
-
-const root = createRoot(document.getElementById('container'));
-root.render(&lt;HelloMessage name=&quot;Taylor&quot; /&gt;);
+<ol>
+<li>
+<p>Clone this repository:</p>
+<pre><code class="language-bash">git clone https://github.com/yourusername/rustysite.git
+cd rustysite
 </code></pre>
-<p>This example will render &quot;Hello Taylor&quot; into a container on the page.</p>
-<p>You'll notice that we used an HTML-like syntax; <a href="https://react.dev/learn#writing-markup-with-jsx">we call it JSX</a>. JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML.</p>
+</li>
+<li>
+<p>Build the project:</p>
+<pre><code class="language-bash">cargo build --release
+</code></pre>
+</li>
+</ol>
+<h2>Usage</h2>
+<ol>
+<li>
+<p>Create a <code>content</code> directory in the project root and add your Markdown files there.</p>
+</li>
+<li>
+<p>Create a <code>styles</code> directory and add a <code>style.css</code> file for your custom styles.</p>
+</li>
+<li>
+<p>Run the program:</p>
+<pre><code class="language-bash">cargo run --release
+</code></pre>
+</li>
+<li>
+<p>The generated HTML files will be in the <code>public</code> directory.</p>
+</li>
+</ol>
+<h2>Project Structure</h2>
+<ul>
+<li><code>src/main.rs</code>: The main Rust source file containing the site generation logic</li>
+<li><code>content/</code>: Directory for your Markdown files</li>
+<li><code>styles/</code>: Directory for your CSS files</li>
+<li><code>public/</code>: Output directory for generated HTML files</li>
+</ul>
+<h2>Dependencies</h2>
+<p>This project uses the following Rust crates:</p>
+<ul>
+<li><code>pulldown-cmark</code>: For parsing Markdown and converting it to HTML</li>
+<li><code>walkdir</code>: For recursively walking through directories</li>
+</ul>
+<h2>Customization</h2>
+<p>You can customize the HTML template and CSS styling by modifying the <code>process_markdown</code> function in <code>main.rs</code> and updating the <code>style.css</code> file in the <code>styles</code> directory.</p>
 <h2>Contributing</h2>
-<p>The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.</p>
-<h3><a href="https://code.fb.com/codeofconduct">Code of Conduct</a></h3>
-<p>Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read <a href="https://code.fb.com/codeofconduct">the full text</a> so that you can understand what actions will and will not be tolerated.</p>
-<h3><a href="https://legacy.reactjs.org/docs/how-to-contribute.html">Contributing Guide</a></h3>
-<p>Read our <a href="https://legacy.reactjs.org/docs/how-to-contribute.html">contributing guide</a> to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.</p>
-<h3><a href="https://github.com/facebook/react/labels/good%20first%20issue">Good First Issues</a></h3>
-<p>To help you get your feet wet and get you familiar with our contribution process, we have a list of <a href="https://github.com/facebook/react/labels/good%20first%20issue">good first issues</a> that contain bugs that have a relatively limited scope. This is a great place to get started.</p>
-<h3>License</h3>
-<p>React is <a href="./LICENSE">MIT licensed</a>.</p>
+<p>Contributions are welcome! Please feel free to submit a Pull Request.</p>
+<h2>License</h2>
+<p>This project is open source and available under the <a href="LICENSE">MIT License</a>.</p>
 
         </body>
         </html>

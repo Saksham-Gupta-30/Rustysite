@@ -1,0 +1,111 @@
+/* styles/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for bash commands in markdown */
+.language-bash {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 0px 16px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.language-bash code {
+    display: inline-block;
+    min-width: 100%;
+}
+
+.language-bash::before {
+    content: '$ ';
+    color: #98c379;
+    user-select: none;
+}
+
+/* Styles for individual lines within the bash block */
+.language-bash .bash-line {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.language-bash .bash-line:not(:first-child)::before {
+    content: '$ ';
+    color: #98c379;
+    user-select: none;
+}
+
+/* Other styles remain the same */
+.language-bash .comment {
+    color: #5c6370;
+    font-style: italic;
+}
+
+.language-bash .string {
+    color: #98c379;
+}
+
+.language-bash .variable {
+    color: #e06c75;
+}
+
+.language-bash .keyword {
+    color: #c678dd;
+}
+
+.language-bash .function {
+    color: #61afef;
+}
+
+code {
+    background-color: #282c34; /* Dark background like bash */
+    color: #abb2bf; /* Light text color */
+    padding: 0px 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+pre code {
+    display: block;
+    padding: 0px 16px;
+    white-space: pre-wrap; /* Wrap lines */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

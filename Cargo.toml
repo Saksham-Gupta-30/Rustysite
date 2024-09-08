@@ -1,0 +1,8 @@
+[package]
+name = "static-site-generator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.9" # For converting Markdown to HTML
+walkdir = "2.3"        # For walking through the directories
